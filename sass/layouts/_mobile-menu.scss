@@ -1,0 +1,125 @@
+.button__menu {
+  display: block;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include tablet {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+  }
+}
+.mob-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-white-color);
+  display: flex;
+  z-index: 1;
+  overflow: auto;
+  @include tablet {
+    display: none;
+  }
+}
+.menu-close {
+  display: block;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+  }
+}
+.button__icon {
+  fill: currentColor;
+}
+
+.menu-contacts {
+  margin-top: 40px;
+}
+.menu-list__link {
+  @include font(500, 40px, 1.18, 0.02em);
+  color: var(--title-text-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+  }
+}
+.menu-contacts__email,
+.menu-contacts__tel {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--primary-accent-color);
+  }
+}
+.menu-contacts__email {
+  @include font(500, 24px, 1.17, 0.02em);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-contacts__tel {
+  @include font(500, 34px, 1.18, 0.02em);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-soc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+.mob-menu__container {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-soc__link {
+  text-decoration: none;
+  color: var(--primary-accent-color);
+  @include font(500, 18px, 1.22, 0.02em);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--secondary-accent-color);
+  }
+}
+.menu-list {
+  margin-bottom: auto;
+}
+.menu-soc__item {
+  position: relative;
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 1px;
+    height: 22px;
+    background-color: var(--form-border-color);
+  }
+}
