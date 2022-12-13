@@ -1309,5 +1309,6 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-wrap {
     align-items: baseline;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=main.css.map */
